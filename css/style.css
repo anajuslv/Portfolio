@@ -923,20 +923,32 @@ h3 {
     }
 }
 
-/* LANGUAGES SECTION */
+/* ========================================
+   LANGUAGES SECTION
+======================================== */
+
 .languages-section {
     padding: 60px 0;
 }
 
+.languages-section h2 {
+    margin-bottom: 15px;
+}
+
+.languages-section > p {
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
 .languages-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     margin-top: 30px;
 }
 
 .language-card {
-    background: var(--surface);
+    background-color: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 25px;
@@ -956,4 +968,11 @@ h3 {
 .language-card p {
     color: var(--muted);
     margin: 0;
+}
+
+/* Responsive layout for mobile devices */
+@media (max-width: 600px) {
+    .languages-grid {
+        grid-template-columns: 1fr;
+    }
 }
