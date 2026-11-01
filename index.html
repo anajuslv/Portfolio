@@ -1,432 +1,659 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-    <title data-i18n="meta_title">Ana Julia Silva | Portfolio </title>
-    <meta name="description"
-          content="Ana Julia Silva's portfolio. Information Systems student exploring software development, technology and innovation."
-          data-i18n-attrs="content:meta_desc">
-    <meta name="author" content="Ana Julia Silva">
- 
-    <!-- Apply the saved theme before the page paints (avoids a flash) -->
-    <script>
-        try {
-            var t = localStorage.getItem("portfolio-theme");
-            document.documentElement.setAttribute("data-theme", t === "light" ? "light" : "dark");
-        } catch (e) {
-            document.documentElement.setAttribute("data-theme", "dark");
-        }
-    </script>
- 
+
+    <title>Ana Julia Silva | Portfolio</title>
+    <meta name="description" content="Ana Julia Silva's portfolio. Information Systems student interested in technology and software development.">
+
+    <!-- SEO: Social media preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ana Julia Silva | IT Portfolio">
+    <meta property="og:description" content="Discover Ana Julia Silva's experience, education, projects and skills in technology.">
+
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
- 
+
 <body>
- 
-    <a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
- 
-    <header class="header">
-        <div class="nav-container">
- 
-            <a href="#home" class="logo">ANA JULIA<span>.</span></a>
- 
-            <button class="menu-toggle" id="menu-toggle" type="button"
-                    aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
-                <span></span><span></span><span></span>
-            </button>
- 
-            <nav class="nav" id="main-nav" aria-label="Main navigation">
-                <a href="#home" class="nav-link active" data-i18n="nav_home">Home</a>
-                <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
-                <a href="#experience" class="nav-link" data-i18n="nav_exp">Experience</a>
-                <a href="#projects" class="nav-link" data-i18n="nav_proj">Projects</a>
-                <a href="#learning" class="nav-link" data-i18n="nav_learn">Learning</a>
-                <a href="#volunteering" class="nav-link" data-i18n="nav_vol">Volunteering</a>
-                <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
-                <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
-            </nav>
- 
-            <div class="header-tools">
-                <div class="lang-switch" role="group" aria-label="Language" data-i18n-attrs="aria-label:lang_label">
-                    <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
-                    <button type="button" data-lang="pt" aria-pressed="false" lang="pt">PT</button>
-                </div>
- 
+
+<a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
+
+<header class="header">
+    <div class="nav-container">
+
+        <button class="menu-toggle" id="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav" id="main-nav" aria-label="Main navigation">
+
+            <a href="#home" class="nav-link" data-i18n="nav_home">Home</a>
+            <a href="#experience" class="nav-link" data-i18n="nav_exp">Experience</a>
+            <a href="#education" class="nav-link" data-i18n="nav_education">Education</a>
+            <a href="#projects" class="nav-link" data-i18n="nav_proj">Projects</a>
+            <a href="#learning" class="nav-link" data-i18n="nav_learning">Learning</a>
+            <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
+
+            <a href="about.html" class="nav-link" data-i18n="nav_about">About me</a>
+            <a href="contact.html" class="nav-link nav-link-contact" data-i18n="nav_contact"> Contact </a>
+
+        </nav>
+
+        <div class="header-tools">
+            <div class="lang-switch" role="group" aria-label="Language">
+
+                <button type="button" data-lang="en"
+                    aria-pressed="true">EN</button>
+
+                <button type="button" data-lang="pt"
+                    aria-pressed="false">PT</button>
+
             </div>
- 
         </div>
-    </header>
- 
-    <main id="main">
- 
-        <!-- Home -->
-        <section class="hero section-container" id="home">
- 
-            <div class="hero-intro">
-                <h1 data-i18n="hero_h1">Building my path<br><span>in tech.</span></h1>
-            </div>
- 
-            <div class="hero-body">
-                <p class="hero-description" data-i18n="hero_desc">
-                    Hi, I'm Ana Julia Silva, an Information Systems student from Brazil with a growing interest in software development and technology. Currently on an academic exchange in Paris, I'm expanding my perspective and exploring how technology can turn ideas into solutions.
-                </p>
- 
-                <div class="hero-buttons">
-                    <a href="#projects" class="button button-primary" data-i18n="btn_work">Explore my work</a>
-                    <a href="assets/AnaCV.pdf" class="button button-secondary"
-                       download data-i18n="btn_cv">Download my CV (PDF)</a>
-                </div>
- 
-                <div class="hero-links">
-                    <a href="https://www.linkedin.com/in/aanajuliasilva" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-                    <a href="https://github.com/anajuslv" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-                </div>
-            </div>
- 
-            <div class="hero-visual">
-                <div class="photo-frame">
-                    <img src="images/profile.jpeg"
-                         alt="Ana Julia Silva"
-                         data-i18n-attrs="alt:hero_alt"
-                         class="profile-photo" width="400" height="500">
-                </div>
-                <p class="photo-caption">
-                    <span class="status-dot" aria-hidden="true"></span>
-                    <span data-i18n="hero_caption">Currently exploring tech in Paris, France</span>
-                </p>
-            </div>
- 
-        </section>
- 
- 
-        <!-- About -->
-        <section class="section-container section" id="about">
-            <div class="section-heading">
-                <h2 data-i18n="about_h2">About me</h2>
-            </div>
- 
-            <p class="section-intro" data-i18n="about_intro">
-                I'm an Information Systems student interested in how technology can solve problems, improve experiences and create meaningful solutions. My background combines academic learning, professional experience and a curiosity about how people and technology interact. During my exchange at Epitech in Paris, I'm broadening my technical knowledge, strengthening my programming skills and experiencing new approaches to software development. I'm eager to keep learning, collaborate with others and turn challenges into opportunities to grow as a professional.
-            </p>
-
-        </section>
- 
- 
-        <!-- Experience and education -->
-        <section class="section-container section" id="experience">
-            <div class="section-heading">
-                <h2 data-i18n="exp_h2">Experience and Education</h2>
-            </div>
- 
-            <div class="timeline">
-
-                <article class="timeline-item">
-                    <span class="timeline-date" data-i18n="exp3_date">Professional experience | September 2024 - September 2026 </span>
-                    <div class="timeline-content">
-                        <h3 data-i18n="exp3_title">Jira and Confluence Administrator</h3>
-                        <p class="item-subtitle">Vallourec Corp | Belo Horizonte, Brazil</p>
-                        <p data-i18n="exp3_text">
-                            Experience in Jira and Confluence administration, workflow configuration, troubleshooting, user support and cloud migration, collaborating with multicultural teams in English.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="timeline-item">
-                    <span class="timeline-date" data-i18n="exp3_date">Professional experience | November 2023 - June 2024</span>
-                    <div class="timeline-content">
-                        <h3 data-i18n="exp3_title">Sales Operations</h3>
-                        <p class="item-subtitle">Global Group | Betim, Minas Gerais</p>
-                        <p data-i18n="exp3_text">
-                            Experience Excel and Power BI, data analysis, report generation and process optimization, contributing to the efficiency of sales operations.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="timeline-item">
-                    <span class="timeline-date" data-i18n="exp3_date">Professional experience | June 2022 - April 2023</span>
-                    <div class="timeline-content">
-                        <h3 data-i18n="exp3_title">Internacional Sales Representative</h3>
-                        <p class="item-subtitle">Global Group | Betim, Minas Gerais</p>
-                        <p data-i18n="exp3_text">
-                            Experience in international sales, client relationship management, cross-cultural communication and negotiation, coordinating business opportunities with clients and suppliers across global markets.
-                        </p>
-                    </div>
-                </article>
- 
-                <article class="timeline-item">
-                    <span class="timeline-date" data-i18n="date_ongoing">In progress — Expected graduation: December 2027</span>
-                    <div class="timeline-content">
-                        <h3 data-i18n="exp1_title">Bachelor's Degree in Information Systems</h3>
-                        <p class="item-subtitle">PUC Minas | Belo Horizonte, Brazil</p>
-                        <p data-i18n="exp1_text">
-                            Exploring the fundamentals of information technology, from software development and data management to systems design and technology-driven problem-solving.
-                        </p>
-                    </div>
-                </article>
- 
-                <article class="timeline-item">
-                    <span class="timeline-date" data-i18n="date_ongoing">In progress</span>
-                    <div class="timeline-content">
-                        <h3 data-i18n="exp2_title">International Academic Exchange</h3>
-                        <p class="item-subtitle">EPITECH | Paris, France</p>
-                        <p data-i18n="exp2_text">
-                            Experiencing a new academic environment, improving my
-                            technical skills and learning through practical projects
-                            and collaboration.
-                        </p>
-                    </div>
-                </article>
-
-            </div>
-        </section>
- 
- 
-        <!-- Projects -->
-        <section class="section-container section" id="projects">
-            <div class="section-heading">
-                <h2 data-i18n="proj_h2">Projects</h2>
-                <p class="section-intro" data-i18n="proj_intro">
-                    Academic and personal projects through which I'm developing my
-                    technical skills.
-                </p>
-            </div>
- 
-            <div class="project-grid">
- 
-                <article class="project-card">
-                    <h3 data-i18n="p1_title">Personal Portfolio</h3>
-                    <p data-i18n="p1_desc">
-                        <strong>Context:</strong> Epitech portfolio project.
-                        <strong>Goal:</strong> present my background, projects, skills
-                        and learning journey in a responsive, accessible website.
-                    </p>
-                    <div class="tag-list">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag" data-i18n="tag_resp">Responsive design</span>
-                    </div>
-                    <a href="https://github.com/" class="text-link" target="_blank"
-                       rel="noopener noreferrer" data-i18n="src">Source code ↗</a>
-                </article>
- 
-                <article class="project-card">
-                    <h3>Farmaqua</h3>
-                    <p data-i18n="p3_desc">
-                        <strong>Context:</strong> Academic extension project.
-                        <strong>Goal:</strong> Developing a web platform to promote water conservation for a compounding pharmacy, integrating database management and role-based user access.
-                    </p>
-                    <div class="tag-list">
-                        <span class="tag">HTML</span>
-                        <span class="tag">Bootstrap</span>
-                        <span class="tag">Express</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
-                    <a href="https://github.com/NataliasilvaOliveira18/farmaqua-web" class="text-link" target="_blank"
-                       rel="noopener noreferrer" data-i18n="src">Source code ↗</a>
-                </article>
-
-                <article class="project-card">
-                    <h3>Medical Clinic Appointment Management</h3>
-                    <p data-i18n="p3_desc">
-                        <strong>Context:</strong> Academic extension project.
-                        <strong>Goal:</strong> Develop a web application to manage
-                        medical appointments and support the organization of clinic
-                        scheduling.
-                    </p>
-                    <div class="tag-list">
-                        <span class="tag">HTML</span>
-                        <span class="tag">Bootstrap</span>
-                        <span class="tag">JSON</span>
-                    </div>
-                    <a href="https://github.com/NataliasilvaOliveira18/farmaqua-web"
-                      class="text-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-i18n="src">Source code ↗</a>
-                </article>
- 
-            </div>
-        </section>
- 
- 
-        <!-- Learning -->
-<section class="section-container section" id="learning">
-    <div class="section-heading">
-        <h2 data-i18n="learn_h2">What I'm learning</h2>
-        <p class="section-intro" data-i18n="learn_intro">
-            Exploring programming languages and web technologies
-            through hands-on exercises and academic projects at Epitech.
-        </p>
-    </div>
-
-    <div class="learning-grid">
-
-        <article class="learning-card">
-            <span class="learning-icon" aria-hidden="true">&lt;/&gt;</span>
-            <h3 data-i18n="l1_title">Programming and Scripting</h3>
-            <p data-i18n="l1_text">
-                Practicing Python for problem-solving and data manipulation,
-                and Shell scripting for command-line operations,
-                automation and working with files.
-            </p>
-        </article>
-
-        <article class="learning-card">
-            <span class="learning-icon" aria-hidden="true">{ }</span>
-            <h3 data-i18n="l2_title">Web Development</h3>
-            <p data-i18n="l2_text">
-                Building web pages with HTML and CSS, adding interactivity
-                with JavaScript, and using PHP to explore server-side
-                programming and dynamic web applications.
-            </p>
-        </article>
 
     </div>
-</section>
- 
- 
-        <!-- Volunteering -->
-        <section class="section-container section" id="volunteering">
-            <div class="section-heading">
-                <h2 data-i18n="vol_h2">Volunteering and community</h2>
-                <p class="section-intro" data-i18n="vol_intro">
-                    Experiences outside the classroom have helped me develop
-                    collaboration, empathy, communication and a stronger sense
-                    of community.
-                </p>
-            </div>
- 
-            <div class="volunteering-grid">
- 
-                <article class="volunteering-card">
-                    <h3>Elas++</h3>
-                    <p data-i18n="v1_text">
-                        Former member of an extension project at PUC Minas dedicated to encouraging women's participation in technology. Organized programming workshops for high school students and discussion circles with women studying technology-related degrees to promote knowledge sharing, representation and career awareness.
-                    </p>
-                    <div class="photo-strip">
-                        <img src="images/Elas1.jpeg" loading="lazy" alt="Volunteering event with Elas++"
-                             data-i18n-attrs="alt:alt_elas1">
-                        <img src="images/Elas2.jpeg" loading="lazy" alt="Activities with the Elas++ community"
-                             data-i18n-attrs="alt:alt_elas2">
-                        <img src="images/Elas3.jpeg" loading="lazy" alt="A moment from an Elas++ initiative"
-                             data-i18n-attrs="alt:alt_elas3">
-                    </div>
-                </article>
- 
-                <article class="volunteering-card">
-                    <h3>MFC Betim</h3>
-                    <p data-i18n="v2_text">
-                        Volunteered in a community project organizing recreational activities for children undergoing cancer treatment, helping create moments of joy, connection and emotional support. The initiative concluded during the COVID-19 pandemic.
-                    </p>
-                    <div class="photo-strip">
-                        <img src="images/MFC.jpeg" loading="lazy" alt="Volunteering with MFC Betim"
-                             data-i18n-attrs="alt:alt_mfc1">
-                        <img src="images/MFC1.jpeg" loading="lazy" alt="A moment from an MFC Betim activity"
-                             data-i18n-attrs="alt:alt_mfc2">
-                    </div>
-                </article>
- 
-            </div>
-        </section>
- 
- 
-        <!-- Skills -->
-        <section class="section-container section" id="skills">
-            <div class="section-heading">
-                <h2 data-i18n="sk_h2">Skills and technologies</h2>
-            </div>
- 
-            <div class="skills-layout">
- 
-                <div class="skill-group">
-                    <h3 data-i18n="sk1">Programming and development</h3>
-                    <div class="tag-list">
-                        <span class="tag">Python</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">C#</span>
-                        <span class="tag">Java</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">SQL</span>
-                    </div>
-                </div>
- 
-                <div class="skill-group">
-                    <h3 data-i18n="sk2">Tools and platforms</h3>
-                    <div class="tag-list">
-                        <span class="tag">Git</span>
-                        <span class="tag">GitHub</span>
-                        <span class="tag">VS Code</span>
-                        <span class="tag">Jira</span>
-                        <span class="tag">Confluence</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
-                </div>
- 
-                <div class="skill-group">
-                    <h3 data-i18n="sk3">Professional skills</h3>
-                    <div class="tag-list">
-                        <span class="tag" data-i18n="tag_comm">Communication</span>
-                        <span class="tag" data-i18n="tag_team">Teamwork</span>
-                        <span class="tag" data-i18n="tag_adapt">Adaptability</span>
-                        <span class="tag" data-i18n="tag_prob">Problem-solving</span>
-                    </div>
-                </div>
- 
-            </div>
-        </section>
- 
- 
-        <!-- Contact -->
-        <section class="section-container section" id="contact">
-            <div class="section-heading">
-                <h2 data-i18n="c_h2">Let's connect</h2>
-                <p class="section-intro" data-i18n="c_intro">
-                    Interested in technology, collaboration or new opportunities?
-                    Feel free to reach out.
-                </p>
-            </div>
- 
-            <div class="contact-layout">
- 
-                <form class="contact-form" id="contact-form">
- 
-                    <label for="name" data-i18n="f_name">Your name</label>
-                    <input type="text" id="name" name="name" autocomplete="name" required
-                           placeholder="Enter your name" data-i18n-attrs="placeholder:ph_name">
- 
-                    <label for="email" data-i18n="f_email">Your phone</label>
-                    <input type="phone" id="email" name="email" autocomplete="phone" required
-                           placeholder="Enter your phone number" data-i18n-attrs="placeholder:ph_email">
- 
-                    <label for="message" data-i18n="f_message">Your message</label>
-                    <textarea id="message" name="message" rows="5" required
-                              placeholder="Write your message..." data-i18n-attrs="placeholder:ph_message"></textarea>
- 
-                    <button type="submit" class="button button-primary" data-i18n="f_btn">Prepare email</button>
- 
-                    <p class="form-note" id="form-status" aria-live="polite" data-i18n="f_note">
-                        Your email application will open with your message ready.
-                    </p>
- 
-                </form>
- 
-            </div>
-        </section>
- 
-    </main>
- 
-    <footer class="footer">
-        <div class="footer-content">
-            <span>Ana Julia Silva <span> | Phone: +55 31 97562-4223 </span></span>
-            <a href="mailto:anajuliasilva75@gmail.com" data-i18n="footer_talk">Let's talk</a>
+</header>
+
+
+<main id="main">
+
+    <!-- INTRODUCTION -->
+
+    <section class="hero section-container" id="home">
+
+        <div class="hero-intro">
+
+            <h1>
+                ANA JULIA
+                <span>SILVA.</span>
+            </h1>
+
+            <p class="hero-role" data-i18n="hero_role">
+                Information Systems Student | Aspiring Software Developer
+            </p>
+
         </div>
-    </footer>
- 
+
+        <div class="hero-body">
+
+            <p class="hero-description" data-i18n="hero_desc">
+                I'm an Information Systems student from Brazil with professional
+                experience in technology and business. Currently on an academic
+                exchange at Epitech in Paris, I'm strengthening my programming
+                skills and exploring new approaches to software development.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="button button-primary"
+                    data-i18n="btn_work">
+                    Explore my projects
+                </a>
+
+                <a href="assets/AnaCV.pdf"
+                    id="cv-download"class="button button-secondary" download data-i18n="btn_cv"> Download my CV (English PDF)
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="photo-frame">
+                <img
+                    src="images/profile.jpeg"
+                    alt="Ana Julia Silva"
+                    class="profile-photo"
+                    width="400"
+                    height="500">
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+
+    <section class="section section-container" id="experience">
+
+        <div class="section-heading">
+
+            <h2 data-i18n="exp_title">Professional Experience</h2>
+
+            <p class="section-intro" data-i18n="exp_intro">
+                My professional journey in technology, business and international sales.
+            </p>
+
+        </div>
+
+        <div class="timeline">
+
+            <article class="timeline-item">
+
+                <span class="timeline-date" data-i18n="exp1_date">
+                    September 2024 – September 2026
+                </span>
+
+                <div class="timeline-content">
+
+                    <h3 data-i18n="exp1_title">
+                        Jira and Confluence Administrator
+                    </h3>
+
+                    <p class="item-subtitle" data-i18n="exp1_sub">
+                        Vallourec | Belo Horizonte, Brazil
+                    </p>
+
+                    <p data-i18n="exp1_text">
+                        Worked with Jira and Confluence administration,
+                        workflow configuration, troubleshooting, user support,
+                        permissions, dashboards and cloud migration testing,
+                        collaborating with multicultural teams in English.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="timeline-item">
+
+                <span class="timeline-date" data-i18n="exp2_date">
+                    November 2023 – June 2024
+                </span>
+
+                <div class="timeline-content">
+
+                    <h3 data-i18n="exp2_title">Sales Operations</h3>
+
+                    <p class="item-subtitle" data-i18n="exp2_sub">
+                        Global Group | Betim, Brazil
+                    </p>
+
+                    <p data-i18n="exp2_text">
+                        Worked with Excel and Power BI, data analysis,
+                        report generation and process optimization,
+                        contributing to the efficiency of sales operations.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="timeline-item">
+
+                <span class="timeline-date" data-i18n="exp3_date">
+                    June 2022 – April 2023
+                </span>
+
+                <div class="timeline-content">
+
+                    <h3 data-i18n="exp3_title">
+                        International Sales Representative
+                    </h3>
+
+                    <p class="item-subtitle" data-i18n="exp3_sub">
+                        Soluparts | Belo Horizonte, Brazil
+                    </p>
+
+                    <p data-i18n="exp3_text">
+                        Worked with international sales, client relationship
+                        management, cross-cultural communication and negotiation,
+                        coordinating business opportunities with clients and
+                        suppliers across global markets.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section class="section section-container" id="education">
+
+        <div class="section-heading">
+
+            <h2 data-i18n="education_title">Education</h2>
+
+            <p class="section-intro" data-i18n="education_intro">
+                My academic background and international learning experience.
+            </p>
+
+        </div>
+
+        <div class="timeline">
+
+            <article class="timeline-item">
+
+                <span class="timeline-date" data-i18n="edu1_date">
+                    Expected graduation: December 2027
+                </span>
+
+                <div class="timeline-content">
+
+                    <h3 data-i18n="edu1_title">
+                        Bachelor's Degree in Information Systems
+                    </h3>
+
+                    <p class="item-subtitle" data-i18n="edu1_sub">
+                        PUC Minas | Brazil
+                    </p>
+
+                    <p data-i18n="edu1_text">
+                        Studying software development, data management,
+                        systems design and technology-driven problem-solving.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="timeline-item">
+
+                <span class="timeline-date" data-i18n="edu2_date">
+                    September 2026 – January 2027
+                </span>
+
+                <div class="timeline-content">
+
+                    <h3 data-i18n="edu2_title">
+                        International Academic Exchange
+                    </h3>
+
+                    <p class="item-subtitle" data-i18n="edu2_sub">
+                        EPITECH | Paris, France
+                    </p>
+
+                    <p data-i18n="edu2_text">
+                        Academic exchange focused on practical projects,
+                        programming and collaboration in an international
+                        learning environment.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section class="section section-container" id="projects">
+
+        <div class="section-heading">
+
+            <h2 data-i18n="projects_title">Projects</h2>
+
+            <p class="section-intro" data-i18n="projects_intro">
+                Academic and personal projects through which I develop my technical skills.
+            </p>
+
+        </div>
+
+        <div class="project-grid">
+
+            <article class="project-card">
+
+                <h3 data-i18n="p1_title">Personal Portfolio</h3>
+
+                <p data-i18n="p1_desc">
+                    <strong>Context:</strong> Epitech portfolio project.
+                    <strong>Goal:</strong> present my background, projects,
+                    skills and learning journey in a responsive website.
+                </p>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <h3 data-i18n="p2_title">Farmaqua</h3>
+
+                <p data-i18n="p2_desc">
+                    <strong>Context:</strong> Academic extension project.
+                    <strong>Goal:</strong> develop a web platform to promote
+                    water conservation for a compounding pharmacy.
+                </p>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <h3 data-i18n="p3_title">
+                    Medical Clinic Appointment Management
+                </h3>
+
+                <p data-i18n="p3_desc">
+                    <strong>Context:</strong> Academic extension project.
+                    <strong>Goal:</strong> develop a web application to
+                    manage medical appointments and support clinic scheduling.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- LEARNING -->
+
+    <section class="section section-container" id="learning">
+
+        <div class="section-heading">
+
+            <h2 data-i18n="learning_title">What I'm Learning</h2>
+
+            <p class="section-intro" data-i18n="learning_intro">
+                Exploring programming languages and web technologies through
+                hands-on exercises and academic projects.
+            </p>
+
+        </div>
+
+        <div class="learning-grid">
+
+            <article class="learning-card">
+
+                <span class="learning-icon">01</span>
+
+                <h3 data-i18n="learning1">
+                    Programming & Scripting
+                </h3>
+
+                <p data-i18n="learning1_desc">
+                    Practicing Python for problem-solving and data manipulation,
+                    as well as Shell scripting for command-line operations,
+                    automation and file management.
+                </p>
+
+            </article>
+
+
+            <article class="learning-card">
+
+                <span class="learning-icon">02</span>
+
+                <h3 data-i18n="learning2">
+                    Web Development
+                </h3>
+
+                <p data-i18n="learning2_desc">
+                    Building pages with HTML and CSS, adding interactivity
+                    with JavaScript and using PHP for server-side programming
+                    and dynamic web applications.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS AND TECHNOLOGIES -->
+
+    <section class="section section-container" id="skills">
+
+        <div class="section-heading">
+
+            <h2 data-i18n="skills_title">Skills & Technologies</h2>
+
+            <p class="section-intro" data-i18n="skills_intro">
+                An overview of my current technical knowledge and familiarity
+                with different tools and technologies.
+            </p>
+
+        </div>
+
+        <div class="skills-layout">
+
+            <article class="skill-group">
+
+                <h3 data-i18n="skill_programming">
+                    Programming & Development
+                </h3>
+
+                <div class="skill">
+
+                    <div class="skill-heading">
+                        <span>HTML</span>
+                        <span>75%</span>
+                    </div>
+
+                    <div class="skill-track">
+                        <div class="skill-fill" style="--level:75%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-heading">
+                        <span>CSS</span>
+                        <span>65%</span>
+                    </div>
+
+                    <div class="skill-track">
+                        <div class="skill-fill" style="--level:65%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-heading">
+                        <span>JavaScript</span>
+                        <span>55%</span>
+                    </div>
+
+                    <div class="skill-track">
+                        <div class="skill-fill" style="--level:55%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-heading">
+                        <span>PHP</span>
+                        <span>55%</span>
+                    </div>
+
+                    <div class="skill-track">
+                        <div class="skill-fill" style="--level:55%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-heading">
+                        <span>Python</span>
+                        <span>40%</span>
+                    </div>
+
+                    <div class="skill-track">
+                        <div class="skill-fill" style="--level:40%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-heading">
+                        <span>SQL</span>
+                        <span>45%</span>
+                    </div>
+
+                    <div class="skill-track">
+                        <div class="skill-fill" style="--level:45%"></div>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="skill-group">
+
+                <h3 data-i18n="skill_tools">Tools & Platforms</h3>
+
+                <div class="skill">
+
+                    <div class="skill-heading">
+                        <span>Jira</span>
+                        <span>85%</span>
+                    </div>
+
+                    <div class="skill-track">
+                        <div class="skill-fill" style="--level:85%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-heading">
+                        <span>Confluence</span>
+                        <span>85%</span>
+                    </div>
+
+                    <div class="skill-track">
+                        <div class="skill-fill" style="--level:85%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-heading">
+                        <span>Microsoft Excel</span>
+                        <span>50%</span>
+                    </div>
+
+                    <div class="skill-track">
+                        <div class="skill-fill" style="--level:50%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-heading">
+                        <span>Power BI</span>
+                        <span>40%</span>
+                    </div>
+
+                    <div class="skill-track">
+                        <div class="skill-fill" style="--level:40%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-heading">
+                        <span>Git & GitHub</span>
+                        <span>40%</span>
+                    </div>
+
+                    <div class="skill-track">
+                        <div class="skill-fill" style="--level:45%"></div>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-copy">
+            <span>Ana Julia Silva</span>
+            <span data-i18n="footer_text">Built with curiosity and code.</span>
+        </div>
+
+        <div class="footer-social" aria-label="Contact links">
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/aanajuliasilva"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/>
+                </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/anajuslv"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.69 2.6 1.2 3.23.92.1-.72.39-1.2.7-1.48-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.54.23 2.68.12 2.96.71.78 1.14 1.78 1.14 3.01 0 4.29-2.61 5.23-5.1 5.5.4.35.75 1.02.75 2.06v3.08c0 .3.2.65.76.54A11.1 11.1 0 0 0 12 .9Z"/>
+                </svg>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:anajuliasilva75@gmail.com"
+               aria-label="Email">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
+                </svg>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:+5531975624223"
+               aria-label="Phone">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.56 3.57.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.19 2.45.56 3.57a1 1 0 0 1-.25 1.02l-2.19 2.2Z"/>
+                </svg>
+            </a>
+
+        </div>
+    </div>
+</footer>
+
+
 </body>
 </html>
