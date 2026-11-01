@@ -25,6 +25,7 @@ const translations = {
         nav_proj: "Projects",
         nav_learning: "Learning",
         nav_skills: "Skills",
+        nav_languages: "Languages",
         nav_about: "About me",
         nav_contact: "Contact",
 
@@ -89,6 +90,15 @@ const translations = {
         skills_intro: "An overview of my current technical knowledge and familiarity with different tools and technologies.",
         skill_programming: "Programming & Development",
         skill_tools: "Tools & Platforms",
+
+        languages_title: "Languages",
+        languages_intro: "Languages I speak and my proficiency levels.",
+        language_portuguese: "Portuguese",
+        language_english: "English",
+        language_french: "French",
+        level_native: "Native",
+        level_advanced: "Advanced",
+        level_basic: "Basic",
 
         about_title: "About Me",
         about_intro: "I enjoy bringing together technology, people and ideas. My academic and professional experiences have helped me develop a practical perspective on problem-solving, communication and collaboration.",
@@ -180,6 +190,7 @@ const translations = {
         nav_proj: "Projetos",
         nav_learning: "Aprendizado",
         nav_skills: "Habilidades",
+        nav_languages: "Idiomas",
         nav_about: "Sobre mim",
         nav_contact: "Contato",
 
@@ -244,6 +255,15 @@ const translations = {
         skills_intro: "Uma visão geral dos meus conhecimentos técnicos atuais e da minha familiaridade com diferentes ferramentas e tecnologias.",
         skill_programming: "Programação e desenvolvimento",
         skill_tools: "Ferramentas e plataformas",
+
+        languages_title: "Idiomas",
+        languages_intro: "Idiomas que falo e meus níveis de proficiência.",
+        language_portuguese: "Português",
+        language_english: "Inglês",
+        language_french: "Francês",
+        level_native: "Nativo",
+        level_advanced: "Avançado",
+        level_basic: "Básico",
 
         about_title: "Sobre mim",
         about_intro: "Gosto de conectar tecnologia, pessoas e ideias. Minhas experiências acadêmicas e profissionais me ajudaram a desenvolver uma visão prática sobre resolução de problemas, comunicação e colaboração.",
