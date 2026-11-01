@@ -601,8 +601,7 @@ if (menuToggle && mainNav) {
 ========================================= */
 
 function updateActiveLink() {
-    // On the homepage, highlight the current section.
-    if (currentPage === "index.html" || currentPage === "") {
+    if (currentPage === "index.html") {
         const sections = document.querySelectorAll("main section[id]");
 
         let currentSection = "home";
@@ -616,9 +615,14 @@ function updateActiveLink() {
         navLinks.forEach(function (link) {
             const href = link.getAttribute("href");
 
-            // Only update links that point to sections on this page.
-            if (href && href.startsWith("#")) {
-                const isActive = href === "#" + currentSection;
+            if (!href) return;
+
+            const hash = href.includes("#")
+                ? href.split("#")[1]
+                : null;
+
+            if (hash && document.getElementById(hash)) {
+                const isActive = hash === currentSection;
 
                 link.classList.toggle("active", isActive);
 
@@ -633,7 +637,6 @@ function updateActiveLink() {
         return;
     }
 
-    // On About and Contact, preserve the active page link.
     navLinks.forEach(function (link) {
         const href = link.getAttribute("href");
 
