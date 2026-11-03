@@ -603,14 +603,24 @@ if (menuToggle && mainNav) {
 function updateActiveLink() {
     if (currentPage === "index.html") {
         const sections = document.querySelectorAll("main section[id]");
+        const scrollPosition = window.scrollY + 160;
 
         let currentSection = "home";
 
         sections.forEach(function (section) {
-            if (section.getBoundingClientRect().top <= 160) {
+            if (section.offsetTop <= scrollPosition) {
                 currentSection = section.id;
             }
         });
+
+        // Check if the user reached the bottom of the page
+        const isAtBottom =
+            window.innerHeight + window.scrollY >=
+            document.documentElement.scrollHeight - 2;
+
+        if (isAtBottom && sections.length > 0) {
+            currentSection = sections[sections.length - 1].id;
+        }
 
         navLinks.forEach(function (link) {
             const href = link.getAttribute("href");
@@ -657,6 +667,8 @@ function updateActiveLink() {
 }
 
 window.addEventListener("scroll", updateActiveLink, { passive: true });
+
+window.addEventListener("resize", updateActiveLink);
 
 updateActiveLink();
 
